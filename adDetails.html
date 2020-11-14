@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="./style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+    
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "xxxxxxxxxxxxxxxxxxxxxxx",
+        authDomain: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        databaseURL: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        projectId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        storageBucket: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        messagingSenderId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        appId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="app1.js"></script>
+    <title>OLX | View Ad</title>
+</head>
+<body onload="mydata();greetUser();" >
+        <div class="header">
+            <a href="home.html" class="logo"  id="greet-user"></a>
+                    <div class="header-right">
+                        <a href="home.html">All Posts</a>
+                        <a href="myposts.html">My Ads</a>
+                        <a href="myChats.html">My Chats</a>
+                        <a href="hearts.html">My Favourites</a>
+                
+                        <button onclick="signOut()" class="btn" style="float: right; margin:5px;width: 150px;">Sign Out</button>
+              
+                    </div>
+            </div>
+    <div id="ad-view" class="ad-view-container"></div>
+</body>
+</html>

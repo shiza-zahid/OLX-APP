@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="./style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+    
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "xxxxxxxxxxxxxxxxxxxxxxx",
+        authDomain: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        databaseURL: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        projectId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        storageBucket: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        messagingSenderId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        appId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="app1.js"></script>
+    <title>OLX | Chat with Seller</title>
+</head>
+<body onload="chat();">
+    <div id="chat-view" class="chat-view-container">
+        <div id="ch" class="chat-header"><button class="btn back" onclick="javascript:history.go(-1)">Go Back</button></div>
+        <div id="cb" class="chat-body"></div>
+        <div id="cf" class="chat-footer">
+            <div><input type="text" id="message-box" placeholder="Type your message here." ></input>
+                <button class="btn" id="send" >Send </button></div>
+        </div>
+    </div>
+</body>
+</html>
